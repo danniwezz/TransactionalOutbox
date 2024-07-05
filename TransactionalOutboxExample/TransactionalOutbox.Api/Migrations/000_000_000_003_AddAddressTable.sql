@@ -1,0 +1,16 @@
+CREATE TABLE [dbo].[Address](
+	[Id] VARCHAR(26) NOT NULL,
+	[PersonId] VARCHAR(26) NOT NULL,
+	[Street] NVARCHAR(255) NOT NULL,
+	[City] NVARCHAR(255) NOT NULL,
+	[State] NVARCHAR(255) NOT NULL,
+	[ZipCode] NVARCHAR(255) NOT NULL,
+	[AddressType] INT NOT NULL
+	CONSTRAINT FK_PersonAddress FOREIGN KEY (PersonId) REFERENCES Person(Id)
+PRIMARY KEY CLUSTERED
+(
+	[Id] ASC
+))
+
+ALTER TABLE [dbo].[Address] ADD CONSTRAINT [DF_Address_AddressType] DEFAULT 0 FOR [AddressType]
+ALTER TABLE [Person] DROP COLUMN [Address]

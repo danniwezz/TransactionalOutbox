@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionalOutbox.Api", "TransactionalOutbox.Api\TransactionalOutbox.Api.csproj", "{EE68FA9D-A079-4E71-A8F9-5CF5BB382254}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionalOutbox.Infrastructure", "TransactionalOutbox.Infrastructure\TransactionalOutbox.Infrastructure.csproj", "{1F79B38B-2629-45CD-9B2C-ABDCDD617D90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.TransactionalOutbox", "Shared\Shared.TransactionalOutbox\Shared.TransactionalOutbox.csproj", "{0FE5D0CD-A331-4EFB-82E9-8863BCEFCCF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TransactionalOutbox.Shared", "TransactionalOutbox.Shared", "{8E73F1AC-6057-474F-960C-A0800B9F9C8F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionalOutbox.Core", "TransactionalOutbox.Core\TransactionalOutbox.Core.csproj", "{5F4E3FC3-FE81-4D27-AFBC-4A17A61EF84D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionalOutbox.Public", "TransactionalOutbox.Public\TransactionalOutbox.Public.csproj", "{5E78DD9B-0A0B-4424-A59A-1B47901E3F13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE68FA9D-A079-4E71-A8F9-5CF5BB382254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE68FA9D-A079-4E71-A8F9-5CF5BB382254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE68FA9D-A079-4E71-A8F9-5CF5BB382254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE68FA9D-A079-4E71-A8F9-5CF5BB382254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F79B38B-2629-45CD-9B2C-ABDCDD617D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F79B38B-2629-45CD-9B2C-ABDCDD617D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F79B38B-2629-45CD-9B2C-ABDCDD617D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F79B38B-2629-45CD-9B2C-ABDCDD617D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE5D0CD-A331-4EFB-82E9-8863BCEFCCF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE5D0CD-A331-4EFB-82E9-8863BCEFCCF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE5D0CD-A331-4EFB-82E9-8863BCEFCCF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE5D0CD-A331-4EFB-82E9-8863BCEFCCF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4E3FC3-FE81-4D27-AFBC-4A17A61EF84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4E3FC3-FE81-4D27-AFBC-4A17A61EF84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4E3FC3-FE81-4D27-AFBC-4A17A61EF84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4E3FC3-FE81-4D27-AFBC-4A17A61EF84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E78DD9B-0A0B-4424-A59A-1B47901E3F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E78DD9B-0A0B-4424-A59A-1B47901E3F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E78DD9B-0A0B-4424-A59A-1B47901E3F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E78DD9B-0A0B-4424-A59A-1B47901E3F13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FE5D0CD-A331-4EFB-82E9-8863BCEFCCF4} = {8E73F1AC-6057-474F-960C-A0800B9F9C8F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BFCADCF-2D9D-4755-84BB-177539AC66C3}
+	EndGlobalSection
+EndGlobal
