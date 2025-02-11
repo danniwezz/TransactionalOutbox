@@ -2,3 +2,4 @@
 **/obj
 **/.vscode
 **/.vs
+/TransactionalOutbox.code-workspace

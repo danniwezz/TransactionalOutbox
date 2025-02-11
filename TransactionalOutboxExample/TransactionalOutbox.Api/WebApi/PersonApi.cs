@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using StrictId;
+using TransactionalOutbox.Api.Mappers;
 using TransactionalOutbox.Core;
 using TransactionalOutbox.Core.Infrastructure;
 using TransactionalOutbox.Core.Models;
@@ -81,7 +82,7 @@ public static class PersonApi
 			return TypedResults.NotFound();
 		}
 
-		person = person.FromDto(personDto);
+		person = personDto.ToEntity();
 
 		await unitOfWork.SaveChangesAsync(cancellationToken);
 		return TypedResults.Ok(person);

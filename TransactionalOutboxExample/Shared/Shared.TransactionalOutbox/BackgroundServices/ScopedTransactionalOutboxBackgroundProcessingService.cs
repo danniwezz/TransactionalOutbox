@@ -14,16 +14,16 @@ public class ScopedTransactionalOutboxBackgroundProcessingService : IScopedTrans
 		_messageRelayServiceNotifier = messageRelayServiceNotifier;
 	}
 
-	public int Delay => 1000;
+	public int DelayInMilliseconds => 1000;
 	
 	public async Task NotifySubscribers(CancellationToken stoppingToken)
 	{
 		while (!stoppingToken.IsCancellationRequested)
 		{
-			_logger.LogInformation("Scoped Processing Service is working");
+			//_logger.LogInformation("Scoped Processing Service is working");
 			await _messageRelayServiceNotifier.Notify();
 
-			await Task.Delay(10000, stoppingToken);
+			await Task.Delay(DelayInMilliseconds, stoppingToken);
 		}
 	}
 }

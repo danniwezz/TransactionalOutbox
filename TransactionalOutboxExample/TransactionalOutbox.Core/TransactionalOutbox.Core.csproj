@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="HotChocolate.Types" Version="15.0.3" />
     <PackageReference Include="StrictId" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.TransactionalOutbox\Shared.TransactionalOutbox.csproj" />
-    <ProjectReference Include="..\TransactionalOutbox.Public\TransactionalOutbox.Public.csproj" />
   </ItemGroup>
 
 </Project>

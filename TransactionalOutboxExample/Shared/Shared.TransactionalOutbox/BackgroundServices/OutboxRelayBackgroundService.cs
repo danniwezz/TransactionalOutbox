@@ -6,8 +6,9 @@ using TransactionalOutbox.Infrastructure;
 namespace Shared.TransactionalOutbox;
 public class OutboxRelayBackgroundService : BackgroundService
 {
+	private const int _delayInSeconds = 10;
 	private readonly ILogger<OutboxRelayBackgroundService> _logger;
-	private readonly TimeSpan _checkInterval = TimeSpan.FromSeconds(10);
+	private readonly TimeSpan _checkInterval = TimeSpan.FromSeconds(_delayInSeconds);
 
 
 	public OutboxRelayBackgroundService(IServiceProvider services, ILogger<OutboxRelayBackgroundService> logger)

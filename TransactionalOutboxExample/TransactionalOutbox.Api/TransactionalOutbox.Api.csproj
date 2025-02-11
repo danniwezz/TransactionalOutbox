@@ -7,9 +7,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
-		<PackageReference Include="SqlDbMigrator" Version="0.1.0" />
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+		<PackageReference Include="HotChocolate" Version="15.0.3" />
+		<PackageReference Include="HotChocolate.Data" Version="15.0.3" />
+		<PackageReference Include="HotChocolate.Data.EntityFramework" Version="15.0.3" />
+		<PackageReference Include="HotChocolate.Server" Version="10.5.5" />
+		<PackageReference Include="HotChocolate.Utilities.DependencyInjection" Version="15.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.12" />
+		<PackageReference Include="SqlDbMigrator" Version="1.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+		<PackageReference Include="HotChocolate.AspNetCore" Version="15.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -25,7 +31,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Migrations\000_000_000_003_AddAddressTable.sql" />
+		<None Remove="Migrations\000_000_000_003_AddAddressTable.sql" />
 	</ItemGroup>
 
 </Project>

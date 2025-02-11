@@ -8,7 +8,8 @@ public class PersonDbContext : DbContext
 {
 
 	private readonly Action<ModelBuilder> _transactionalOutboxModelBuilder;
-	public DbSet<OutboxEntry> OutboxEntries { get; set; }
+	public DbSet<OutboxEntry> TransactionalOutbox { get; set; }
+	public DbSet<Person> Person { get; set; }
 
 	public PersonDbContext(PersonTransactionalOutbox transactionalOutbox, DbContextOptions<PersonDbContext> options) : base(options)
 	{
@@ -43,9 +44,9 @@ public class PersonDbContext : DbContext
 
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
-#if DEBUG
+//#if DEBUG
 		optionsBuilder.EnableDetailedErrors();
 		optionsBuilder.EnableSensitiveDataLogging();
-#endif
+//#endif
 	}
 }

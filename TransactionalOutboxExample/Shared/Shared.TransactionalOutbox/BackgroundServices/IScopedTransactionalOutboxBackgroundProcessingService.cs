@@ -5,7 +5,7 @@ public interface IScopedTransactionalOutboxBackgroundProcessingService
 	/// <summary>
 	/// The delay between each time the service is run
 	/// </summary>
-	public int Delay { get; }
+	public int DelayInMilliseconds { get; }
 	/// <summary>
 	/// Notifies the subscribers about new messages in the outbox
 	/// </summary>

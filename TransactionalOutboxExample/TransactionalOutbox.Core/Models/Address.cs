@@ -1,5 +1,4 @@
 ﻿using StrictId;
-using TransactionalOutbox.Public;
 
 namespace TransactionalOutbox.Core.Models;
 public class Address
@@ -37,34 +36,6 @@ public class Address
 			City = city,
 			State = state,
 			ZipCode = zipCode
-		};
-	}
-
-	public Address FromDto(AddressDto dto)
-	{
-		return new Address
-		{
-			Id = new Id<Address>(dto.Id),
-			PersonId = new Id<Person>(dto.PersonId),
-			AddressType = (AddressType)dto.AddressType,
-			Street = dto.Street,
-			City = dto.City,
-			State = dto.State,
-			ZipCode = dto.ZipCode
-		};
-	}
-
-	public AddressDto ToDto()
-	{
-		return new AddressDto
-		{
-			Id = Id.ToString(),
-			PersonId = PersonId.ToString(),
-			AddressType = (AddressTypeDto)AddressType,
-			Street = Street,
-			City = City,
-			State = State,
-			ZipCode = ZipCode
 		};
 	}
 }

@@ -2,7 +2,6 @@
 using StrictId;
 using System.Collections.ObjectModel;
 using TransactionalOutbox.Core.Events;
-using TransactionalOutbox.Public;
 
 namespace TransactionalOutbox.Core.Models;
 
@@ -18,7 +17,7 @@ public class Person : AggregateRoot
 		var personId = Id<Person>.NewId();
         var person = new Person
         {
-            Id = Id<Person>.NewId(),
+            Id = personId,
             Name = name,
             Age = age,
             Addresses = addresses.Select(x =>
@@ -46,35 +45,4 @@ public class Person : AggregateRoot
             Addresses = addresses
         };
     }
-
-	public Person FromDto(PersonDto personDto)
-	{
-		return new Person
-		{
-			Id = new Id<Person>(personDto.Id),
-			Name = personDto.Name,
-			Age = personDto.Age,
-			Addresses = personDto.Addresses.Select(x => new Address
-			{
-				Id = new Id<Address>(x.Id),
-				PersonId = new Id<Person>(x.PersonId),
-				AddressType = (AddressType)x.AddressType,
-				Street = x.Street,
-				City = x.City,
-				State = x.State,
-				ZipCode = x.ZipCode
-			}).ToList()
-		};
-	}
-
-    public PersonDto ToDto()
-	{
-		return new PersonDto
-		{
-			Id = Id.ToString(),
-			Name = Name,
-			Age = Age,
-			Addresses = Addresses.Select(x => x.ToDto()).ToList()
-		};
-	}
 }
